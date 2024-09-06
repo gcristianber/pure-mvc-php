@@ -1,0 +1,11 @@
+{
+    "name": "chan/sample-pure-php",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    },
+    "require": {
+        "nikic/fast-route": "^1.3"
+    }
+}
