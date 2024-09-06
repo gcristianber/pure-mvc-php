@@ -7,8 +7,8 @@ use App\Core\Controller;
 class IndexController extends Controller
 {
 
-    public function index(): void
+    public function index()
     {
-        $this->view('index');
+        return view('index');
     }
 }

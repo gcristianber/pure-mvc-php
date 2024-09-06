@@ -1,15 +1,19 @@
 <?php
 
 require 'vendor/autoload.php';
+require 'app/utils/string.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad();
 
 use FastRoute\RouteCollector;
 use FastRoute\Dispatcher;
 
-
 $dispatcher = FastRoute\simpleDispatcher(function (RouteCollector $r) {
     $r->addRoute('GET', '/', [App\Controllers\IndexController::class, 'index']);
     $r->addRoute('GET', '/self-invoke', function () {
-        echo "Sample Self Invoking Route";
+        // echo "Sample Self Invoking Route";
+        return view("index");
     });
 });
 
