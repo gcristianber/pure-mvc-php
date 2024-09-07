@@ -27,3 +27,33 @@ if (!function_exists('view')) {
         require($viewPath);
     }
 }
+
+if (!function_exists('hash_password')) {
+    /**
+     * By default it uses the ARGON2I.
+     */
+    function hash_password(string $password, $encryptor = PASSWORD_ARGON2I, $options = [
+        'memory_cost' => 1 << 14, // 16 MiB
+        'time_cost'   => 4,       // 4 passes
+        'threads'     => 2,       // 2 threads
+    ]): string
+    {
+        return password_hash($password, $encryptor, $options);
+    }
+}
+
+if (!function_exists('hash_password_verify')) {
+    /**
+     * Verifies the password if it is match.
+     */
+    function hash_password_verify(string $password): bool
+    {
+        $hash = hash_password($password);
+
+        if (!password_verify($password, $hash)) {
+            return false;
+        }
+
+        return true;
+    }
+}

@@ -24,20 +24,25 @@ class Database
      * Executes the query statement to the database.
      */
     protected function query(string $query, array $data = [])
-	{
+    {
 
-		$con = $this->connect();
-		$stm = $con->prepare($query);
+        $con = $this->connect();
+        $stm = $con->prepare($query);
 
-		$check = $stm->execute($data);
+        $check = $stm->execute($data);
 
-		if ($check) {
-			$result = $stm->fetchAll(\PDO::FETCH_OBJ);
-			if (is_array($result) && count($result)) {
-				return $result;
-			}
-		}
+        if ($check) {
+            $result = $stm->fetchAll(\PDO::FETCH_OBJ);
+            if (is_array($result) && count($result)) {
+                return $result;
+            }
+        }
 
-		return false;
-	}
+        return false;
+    }
+
+    /**
+     * Kills the connection to the database.
+     */
+    private function disconnect() {}
 }

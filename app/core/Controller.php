@@ -2,4 +2,8 @@
 
 namespace App\Core;
 
-class Controller {}
+class Controller {
+
+    // protected $defaultMethod = "index";
+
+}
