@@ -2,7 +2,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gcristianber/)
 [![LinkedIn](https://img.shields.io/badge/Facebook-Connect-brightgreen?style=for-the-badge&labelColor=blue&logo=facebook)](https://www.facebook.com/profile.php?id=100080436475426)
 
-'Sample Pure PHP' is came out from out-of-nowhere, I don't know what to name within this repository, If you want to explore PHP more without any framework with MVC structure you can fork this and try your own.
+'Pure MVC PHP' is came out from out-of-nowhere, I don't know what to name within this repository, If you want to explore PHP more without any framework with MVC structure you can fork this and try your own.
 
 ## Installation
 
